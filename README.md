@@ -1,6 +1,6 @@
 # Sysstats
 
-[![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url]
+[![Build Status](https://travis-ci.org/XereoNet/node_sysstats.svg?branch=master)](https://travis-ci.org/XereoNet/node_sysstats) [![Coverage Status](https://coveralls.io/repos/XereoNet/node_sysstats/badge.svg?branch=master)](https://coveralls.io/r/XereoNet/node_sysstats?branch=master)
 
 Provide system statistics in a easy to use API. Made to be cross platform so you can collect statistics on Windows too!
 
