@@ -1,6 +1,6 @@
 {
   "name": "sysstats",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "System statistics for Node, cross platform.",
   "main": "lib/sysstats.js",
   "scripts": {
