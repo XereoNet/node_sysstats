@@ -1,4 +1,3 @@
-require("blanket");
 require("jasmine-beforeall");
 
 var stats = require("../lib/sysstats.js")();
