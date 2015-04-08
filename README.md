@@ -42,3 +42,40 @@ stats.unref();
 ```
 
 ## API
+
+### Sysstats(options)
+
+Creates the stats listener. If it has already been called it will return the previous one.
+
+Options:
+    - interval: The interval between cpu calculations in milliseconds. (default: 1000)
+
+Providing a custom interval will calculate the cpu usage over the past x milliseconds.
+
+### (Array) Sysstats.prototype.cpus
+
+Returns the cpu usage as of maximum `interval` milliseconds ago. Returns an array with objects containing:
+- speed: The speed of each core at last calculation
+- times: The amount of time the cpu was in each of the states (See node docs for os.cpus())
+
+The returned data can be maximum `interval` seconds old.
+
+### (Array) Sysstats.prototype.getCPUInfo
+
+Returns the model name for each core (As this is not provided in the cpus call). The keys correspond to the cores in the .cpus call.
+
+### (Object) Sysstats.prototype.mem
+
+Returns the current memory usage as an object containing:
+- used: The used memory
+- total: The total memory in the system
+
+### (void) Sysstats.prototype.unref
+
+Unreferences the timer used to calculate the cpu usage. (for automatic closing of node)
+
+## License
+
+Copyright 2015 Jamy Timmermans and Contributors.
+
+Licensed under GPLv2. See `LICENSE` for more details.
